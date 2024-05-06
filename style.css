@@ -1,0 +1,179 @@
+:root{
+  --color-primary: yellow ;
+  --color-dark: black ;
+  --color-light: white ;
+  --color-grey: Grey; 
+  --font: 'system-ui', 'sans-serif';
+
+}
+
+*{
+  margin: 2;
+  padding: 2;
+  font-family: var(--font);
+  color: var(--color-dark);
+
+}
+
+@media (prefers-color-scheme: dark) {
+  :root{
+    --color-primary: rgb(223, 189, 0); ;
+    --color-dark: white ;
+    --color-light: black ;
+    --color-grey: Grey; 
+    
+  
+  }
+
+}
+
+
+html{
+  background-color: var(--color-light);
+  padding: 0.5rem;
+  line-height: 1.3rem;
+}
+
+section {
+  margin: 1.5rem;
+}
+
+
+.header{  
+  display: grid;
+  grid-template-columns: minmax(100px, 180px) 1fr;
+  max-width: 1000px;
+  margin: 0 auto;
+  gap: 8px;
+}
+
+@media screen and(max-width: 768px) {
+  .header{
+    grid-template-columns: minmax(200px, 180px);
+    
+  }
+}
+
+.header_photo{
+  display: inline-block;
+  width: 100%;
+  height: 100%;
+
+}
+
+.header_text{
+  background-color: var(--color-primary);
+  padding: 2rem;
+
+}
+
+.header h1{
+  font-size: 3rem;
+  line-height: 1.5rem;
+  text-transform: uppercase;  
+  font-weight: 500;
+}
+
+.header h2{
+  margin-top: 0.25rem;
+  font-size: 1rem;
+  
+}
+
+.content{
+  margin: 0 10rem ; 
+  max-width: 800px;
+  
+}
+
+.content_title{
+  background-color: var(--color-dark);
+  color: var(--color-light);
+  display: inline-block;
+  padding: 0.3rem 0.7rem;
+  text-transform: uppercase;
+  font-weight: 500;
+  font-size: 1rem;
+  letter-spacing: 0.1rem;
+  margin-bottom: 1rem;
+
+}
+
+.content_subtitle{
+  font-weight: bold;
+  margin-bottom: 0.25rem;
+
+
+
+}
+
+.content_details{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-auto-rows: min-content;
+  gap: 30px 50px;
+
+
+}
+
+@media screen and (max-width: 768px) {
+  .content_details{
+    grid-template-columns: 1fr;
+  }
+}
+
+.content_detail{
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem;
+
+}
+
+.content_contact a
+.content_contact span{
+  text-decoration: none;
+  font-style: normal;
+  
+}
+
+.content_contact a[href*="mailto"]{
+  text-decoration: underline; 
+}
+
+.content_date_time{
+  color: var(--color-grey);
+  text-transform: uppercase;
+  font-family: monospace;
+  padding-left: 1rem ;
+}
+
+.content_lists{
+
+  margin-left: 2rem;
+  margin-block: 0.75rem;
+}
+
+.content_lists li{
+  margin-bottom: 0.3rem;
+
+}
+
+.content_skills{
+  gap: 14px 70px;
+
+}
+
+.content_skill > progress {
+  background-color: var(--color-dark);
+  width: 80%;
+  height: 5px;
+
+}
+
+.content_skill > progress::-webkit-progress-value {
+  background-color: var(--color-primary);
+}
+
+.content_skill > progress::-webkit-progress-bar{
+  background-color: var(--color-grey);
+}
